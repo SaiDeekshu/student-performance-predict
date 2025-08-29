@@ -1,0 +1,37 @@
+{
+  "dataset_csv": "C:\\Users\\DEEKSHU\\Desktop\\Student\\student-performance\\data\\Student_performance_data _.csv",
+  "used_feature_cols": [
+    "StudyTimeWeekly",
+    "Age",
+    "Gender",
+    "ParentalEducation",
+    "Extracurricular",
+    "Absences",
+    "ParentalSupport",
+    "Tutoring"
+  ],
+  "numeric_cols": [
+    "StudyTimeWeekly",
+    "Absences"
+  ],
+  "categorical_cols": [
+    "Age",
+    "Gender",
+    "ParentalEducation",
+    "Extracurricular",
+    "ParentalSupport",
+    "Tutoring"
+  ],
+  "target_reg": "GPA",
+  "use_classification": true,
+  "target_cls": "GradeClass",
+  "reg_report": {
+    "r2": 0.9189476991422562,
+    "rmse": 0.25889146571788585,
+    "mae": 0.20249688145542954
+  },
+  "cls_report": {
+    "accuracy": 0.6534446764091858,
+    "f1_macro": 0.46345643468668385
+  }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prediction Result</title>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{{ url_for('static', filename='js/particles-config.js') }}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .card {
+      background:black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .big {
+      font-size: 1.3em;
+      margin: 10px 0;
+    }
+    .suggestions {
+      list-style: disc;
+      margin: 10px 0 20px 25px;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Predictions</h1>
+  <div class="card">
+    {% if outputs.reg is defined %}
+      <p class="big">
+        Predicted Final Score/GPA: <b>{{ '%.2f' % outputs.reg }}</b>
+      </p>
+    {% endif %}
+    {% if outputs.cls is defined %}
+      <p class="big">
+        Predicted Grade Band: <b>{{ outputs.cls }}</b>
+      </p>
+    {% endif %}
+  </div>
+  {% if tips and tips|length > 0 %}
+    <div class="card">
+      <h3>Suggestions for Improvement</h3>
+      <ul class="suggestions">
+        {% for t in tips %}
+          <li>{{ t }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  <a class="link" href="{{ url_for('index') }}">← Predict another</a>
+</div>
+</body>
+</html>

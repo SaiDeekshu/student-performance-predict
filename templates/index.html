@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>📖Student Performance Predictor📖</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{{ url_for('static', filename='js/particles-config.js') }}"></script>
+
+</head>
+<body>
+    <div id="particles-js"></div>
+
+<div class="container">
+  <h1>Student Performance Predictor</h1>
+  <form method="post" style="margin-top:16px">
+    {% for name, kind in fields %}
+      <div class="field">
+        <label>{{ name }}</label>
+        {% if kind == "number" %}
+          <input name="{{ name }}" type="number" step="0.01" required>
+        {% else %}
+          <input name="{{ name }}" type="text" required>
+        {% endif %}
+      </div>
+    {% endfor %}
+    <button type="submit">Predict</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "dataset_csv": "data/Student_performance_data _.csv",
+  "target_reg": "GPA",
+  "use_classification": true,
+  "target_cls": "GradeClass",
+  "id_cols": ["StudentID"],
+  "feature_map": {
+    "study_hours": "StudyTimeWeekly",
+    "attendance": null,
+    "past_score1": null,
+    "past_score2": null,
+    "age": "Age",
+    "gender": "Gender",
+    "parent_education": "ParentalEducation",
+    "extracurricular": "Extracurricular",
+    "internet_usage": null,
+    "sleep_hours": null,
+    "absences": "Absences",
+    "homework_time": null,
+    "family_support": "ParentalSupport",
+    "tutoring": "Tutoring"
+  }
+}
