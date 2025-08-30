@@ -1,7 +1,7 @@
 
-🎓#Student Performance Predictor
+🎓**Student Performance Predictor**
 
-📌 #Overview
+📌 **Overview**
 
 The project is about predicting student exam performance.
 
@@ -9,7 +9,7 @@ It uses a dataset of student details like study hours, attendance, and extracurr
 
 Machine learning models are applied to predict the final exam score.
 
-🚀 #Features
+🚀 **Features**
 
 Takes inputs like study hours, attendance, and extra activities
 
@@ -19,7 +19,7 @@ Uses regression models (Linear Regression, Random Forest) to make predictions.
 
 Simple Flask app to interact with the model
 
-🛠️ #Tech Stack
+🛠️ **Tech Stack**
 
 Python
 
@@ -29,7 +29,7 @@ Pandas, NumPy, Scikit-learn
 
 HTML/CSS (for frontend)
 
-#How To Run
+**How To Run**
 
 Clone the repository
 
