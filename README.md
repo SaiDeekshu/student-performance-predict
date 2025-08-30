@@ -29,16 +29,15 @@ Pandas, NumPy, Scikit-learn
 
 HTML/CSS (for frontend)
 
+How To Run
 
 Clone the repository
 
 Install requirements:
-
 pip install -r requirements.txt
 
 
 Run the Flask app:
-
 python app.py
 
 
